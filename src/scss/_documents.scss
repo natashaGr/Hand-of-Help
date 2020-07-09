@@ -1,0 +1,128 @@
+.documents {
+   padding: 52px 0px 56px 0px;
+   background-color: #efefef;
+
+   &__inner {
+      text-align: center;
+   }
+
+   .slick-dots {
+      font-size: 0;
+      display: inline-flex;
+      margin-top: 17px;
+      li {
+         margin-left: 4px;
+         button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #11757d;
+         }
+         &.slick-active {
+            button {
+               background-color: #11757d;
+            }
+         }
+      }
+   }
+}
+.card {
+   position: relative;
+   max-width: 177px;
+   width: 100%;
+   min-height: 245px;
+
+   &--download {
+      border: 6px solid #11757d;
+      border-radius: 10px;
+      background-image: linear-gradient(-200deg, #0d6f7c 0%, #33a987 100%);
+   }
+   &:hover,
+   &:focus,
+   &.card__blackout {
+      .card__blackout {
+         visibility: visible;
+         opacity: 1;
+         height: 100%;
+      }
+   }
+
+   &__link {
+      display: block;
+      img {
+         display: block;
+      }
+   }
+
+   &__blackout {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      padding: 53px 0px 43px 0px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.5s;
+      &--download {
+         visibility: visible;
+         opacity: 1;
+         height: 100%;
+         .card__search {
+            order: 1;
+            align-items: flex-start;
+         }
+         .card__title {
+            order: 2;
+            margin-bottom: 30px;
+         }
+      }
+
+      &:after {
+         content: "";
+         position: absolute;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         right: 0;
+         border-radius: 10px;
+         width: 100%;
+         height: 100%;
+         background-image: linear-gradient(-200deg, rgba(13, 111, 124, 0.9) 0%, rgba(51, 169, 135, 0.9) 100%);
+      }
+   }
+
+   &__title {
+      position: relative;
+      z-index: 3;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1.2px;
+      color: #ffffff;
+   }
+
+   &__text {
+      position: relative;
+      z-index: 3;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      color: #ffffff;
+   }
+
+   &__search {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex: 1 1 auto;
+   }
+}

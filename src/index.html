@@ -3,12 +3,18 @@
 @@include('components/_head.html')
 
 <body>
-  @@include('components/_header.html')
   <!-- WRITE CODE HERE -->
-
-  <!-- STOP WRITE CODE -->
-  @@include('components/_footer.html')
-  @@include('components/_popup.html')
+  <div class="wrapper">
+    <div class="main-header" style="background-image: url(images/home-1.png);">
+      @@include('components/_header.html')
+      @@include('components/_home.html')
+    </div>
+    @@include('components/_system.html')
+    @@include('components/_documents.html')
+    @@include('components/_how-start.html')
+    <!-- STOP WRITE CODE -->
+    @@include('components/_footer.html')
+  </div>
   @@include('components/_scripts.html')
 </body>
 

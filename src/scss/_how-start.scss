@@ -1,0 +1,104 @@
+.how-start {
+   padding: 54px 0px 54px 0px;
+   // .how-start__inner
+
+   @media (max-width: $md3+px) {
+      .container {
+         padding: 0;
+      }
+   }
+
+   &__inner {
+      padding: 63px 110px 53px 110px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      width: 100%;
+      min-height: 261px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      border-radius: 130px;
+      &:after {
+         content: "";
+         z-index: -1;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 100%;
+         width: 100%;
+         border-radius: 130px;
+         background-image: linear-gradient(-200deg, #ffb03c 0%, #ff950d 100%);
+      }
+      @media (max-width: $md3+px) {
+         justify-content: center;
+         text-align: center;
+      }
+      @media (max-width: 450px) {
+         padding: 56px 25px;
+         border-radius: 50px;
+         &:after {
+            content: "";
+            border-radius: 50px;
+         }
+      }
+   }
+
+   &__box {
+      max-width: 463px;
+      width: 100%;
+      color: #ffffff;
+      @media (max-width: 950px) {
+         margin-bottom: 40px;
+      }
+   }
+
+   // .how-start__title
+
+   &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 20px;
+      @media (max-width: 450px) {
+         max-width: 210px;
+         width: 100%;
+         margin: 0 auto 20px;
+      }
+   }
+
+   // .how-start__descr
+
+   &__descr {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 1.4px;
+   }
+
+   // .how-start__btn
+
+   &__btn {
+   }
+
+   // .how-start__illustration
+
+   &__illustration {
+      margin-left: 30px;
+      margin-top: 20px;
+      @media (max-width: $md3+px) {
+         display: none;
+      }
+   }
+}
+.container {
+}
+.btn {
+}

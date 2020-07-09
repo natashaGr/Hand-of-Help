@@ -1,3 +1,12 @@
+$(function () {
+   $(window).scroll(function () {
+      var top = $(document).scrollTop();
+      if (top > 300) $('.header').addClass('header__fixsed');
+      else $('.header').removeClass('header__fixsed'); //200 - это значение высоты прокрутки страницы для добавления класс
+   });
+
+});
+
 //Adaptive functions
 var move_array = [];
 if ($('*[data-move]')) {
@@ -72,24 +81,95 @@ function dynamic_adaptive_back_all(){
 */
 
 //SLIDERS
-if ($('.mainslider').length > 0) {
-   $('.mainslider').slick({
-      //autoplay: true,
-      //infinite: false,
-      dots: true,
+if ($('.system__inner').length > 0) {
+   $('.system__inner').slick({
+      dots: false,
       arrows: false,
       accessibility: false,
-      slidesToShow: 1,
+      infinite: true,
+      slidesToShow: 5,
       autoplaySpeed: 3000,
+      autoplay: true,
       //asNavFor:'',
       //appendDots:
       //appendArrows:$('.mainslider-arrows .container'),
       nextArrow: '<button type="button" class="slick-next"></button>',
       prevArrow: '<button type="button" class="slick-prev"></button>',
-      responsive: [{
-         breakpoint: 768,
-         settings: {}
-      }]
+      responsive: [
+         {
+            breakpoint: 1020,
+            settings: {
+               slidesToShow: 4,
+            }
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 2,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 450,
+            settings: {
+               slidesToShow: 1,
+               dots: true
+            }
+         }
+      ]
+   });
+}
+
+if ($('.documents__inner').length > 0) {
+   $('.documents__inner').slick({
+      dots: false,
+      arrows: false,
+      accessibility: false,
+      infinite: true,
+      slidesToShow: 6,
+      autoplaySpeed: 3000,
+      autoplay: true,
+      //asNavFor:'',
+      //appendDots:
+      //appendArrows:$('.mainslider-arrows .container'),
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      responsive: [
+         {
+            breakpoint: 1110,
+            settings: {
+               slidesToShow: 5,
+            }
+         },
+         {
+            breakpoint: 920,
+            settings: {
+               slidesToShow: 4,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 760,
+            settings: {
+               slidesToShow: 3,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 560,
+            settings: {
+               slidesToShow: 2,
+               dots: true
+            }
+         },
+         {
+            breakpoint: 450,
+            settings: {
+               slidesToShow: 1,
+               dots: true
+            }
+         }
+      ]
    });
 }
 
@@ -384,5 +464,10 @@ function tip() {
 }
 $(function () {
 
+
+
+
 });
+
+
 

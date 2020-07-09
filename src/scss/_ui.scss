@@ -1,5 +1,36 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+.title-box {
+   max-width: 450px;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   transform: translateY(-123px);
+   // .title__head
 
+   &__head {
+      color: #ff950e;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      margin-bottom: 5px;
+   }
+
+   // .title__slogan
+
+   &__slogan {
+      color: #282828;
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-left: 2px;
+      @media (max-width: 450px) {
+         max-width: 250px;
+         width: 100%;
+         margin: 0 auto;
+      }
+   }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
